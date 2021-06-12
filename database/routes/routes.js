@@ -14,8 +14,8 @@ router.post('/user',  UserController.create);
 
 /**
  * route to list all users
- router.get('/user', AdminAuth, UserController.index);
  */
+router.get('/user', UserController.index);
 
 /**
  * route to find user by id

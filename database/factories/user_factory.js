@@ -1,6 +1,7 @@
 class UserFactory {
   Build(simpleUser) {
     var user = {
+      id: simpleUser.id,
       full_name: simpleUser.full_name,
       phone: simpleUser.phone,
       email: simpleUser.email,
