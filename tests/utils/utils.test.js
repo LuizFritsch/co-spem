@@ -1,4 +1,4 @@
-var utils = require("../../utils/utils");
+var utils = require("../../src/utils/utils");
 describe('test isTextFieldValueNull',()=>{
   it("should return true when we pass a null value", () => {
     expect(utils.isTextFieldValueEmpty(null)).toEqual(true);

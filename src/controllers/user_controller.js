@@ -1,6 +1,6 @@
-var utils = require("../../utils/utils");
-var User = require("../services/user_service");
-var userFactory = require("../factories/user_factory");
+var utils = require("../utils/utils");
+var User = require("../database/services/user_service");
+var userFactory = require("../database/factories/user_factory");
 
 var bcrypt = require("bcrypt");
 const saltRounds = 10;

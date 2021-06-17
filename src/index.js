@@ -1,7 +1,7 @@
 //Imports
 var mongoose = require("mongoose");
 var express = require("express");
-var router = require("./database/routes/routes");
+var router = require("./routes/routes");
 var cors = require("cors");
 //Constants
 const db_host = "localhost";
@@ -9,7 +9,6 @@ const db_port = "27017";
 const db_db = "cospem";
 const port = 80;
 const app = express();
-
 
 
 mongoose.connect(`mongodb://${db_host}:${db_port}/${db_db}`, {
