@@ -1,8 +1,8 @@
 var express = require("express")
 var app = express();
 var router = express.Router();
-var HomeController = require("../controller/HomeController");
-var UserController = require("../controller/UserController");
+var HomeController = require("../controllers/home_controller");
+var UserController = require("../controllers/user_controller");
 var AdminAuth = require("../../middleware/AdminAuth");
 
 router.get('/', HomeController.index);

@@ -16,7 +16,6 @@ class UserController {
       var users = await User.findAll();
       var usrs = [];
       users.forEach((user) => {
-        console.log(user);
         usrs.push(userFactory.Build(user));
       });
       res.json(usrs);
