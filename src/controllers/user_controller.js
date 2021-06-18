@@ -26,17 +26,17 @@ class UserController {
 
   async create(req, res) {
     var { email, full_name, password, role, phone } = req.body;
-    if (utils.isTextFieldValueNull(email)) {
+    if (utils.isTextFieldValueEmpty(email)) {
       res.status(400);
       res.json({ msg: "invalid email..." });
       return;
     }
-    if (utils.isTextFieldValueNull(full_name)) {
+    if (utils.isTextFieldValueEmpty(full_name)) {
       res.status(400);
       res.json({ msg: "invalid name..." });
       return;
     }
-    if (utils.isTextFieldValueNull(password)) {
+    if (utils.isTextFieldValueEmpty(password)) {
       res.status(400);
       res.json({ msg: "invalid password..." });
       return;

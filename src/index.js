@@ -4,14 +4,11 @@ var express = require("express");
 var router = require("./routes/routes");
 var cors = require("cors");
 //Constants
-const db_host = "localhost";
-const db_port = "27017";
-const db_db = "cospem";
-const port = 80;
+const config = require('./config');
 const app = express();
 
 
-mongoose.connect(`mongodb://${db_host}:${db_port}/${db_db}`, {
+mongoose.connect(`mongodb://${config.db_host}:${config.db_port}/${config.db_db}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -27,6 +24,8 @@ app.use(express.json());
 
 app.use("/", router);
 
-app.listen(port, () => {
-  console.log(`Server is running on ${port}...`);
+app.listen(config.port,()  =>  {
+  console.log(`Server is running on ${config.port}...`);
 });
+
+module.exports = app;
